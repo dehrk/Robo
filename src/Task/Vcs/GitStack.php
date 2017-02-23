@@ -63,6 +63,18 @@ class GitStack extends CommandStack
     }
 
     /**
+     * Executes `git clean` command with files to clean pattern
+     *
+     * @param string $pattern
+     *
+     * @return $this
+     */
+    public function clean($pattern)
+    {
+        return $this->exec([__FUNCTION__, $pattern]);
+    }
+
+    /**
      * Executes `git commit` command with a message
      *
      * @param string $message
