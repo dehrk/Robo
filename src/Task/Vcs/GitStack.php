@@ -143,6 +143,19 @@ class GitStack extends CommandStack
     }
 
     /**
+     * Executes `git fetch` command.
+     *
+     * @param string $origin
+     * @param string $branch
+     *
+     * @return $this
+     */
+    public function fetch($origin = '', $branch = '')
+    {
+        return $this->exec([__FUNCTION__, $origin, $branch]);
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function run()
