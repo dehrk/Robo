@@ -168,6 +168,19 @@ class GitStack extends CommandStack
     }
 
     /**
+     * Execute `git config` command.
+     *
+     * @param string $name
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function config($name = '', $value = '')
+    {
+    	return $this->exec([__FUNCTION__, $name, $value]);
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function run()
