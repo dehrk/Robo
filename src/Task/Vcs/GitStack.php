@@ -63,6 +63,18 @@ class GitStack extends CommandStack
     }
 
     /**
+     * Executes `git rm` command with files to rm pattern
+     *
+     * @param string $pattern
+     *
+     * @return $this
+     */
+    public function rm($pattern)
+    {
+        return $this->exec([__FUNCTION__, $pattern]);
+    }
+
+    /**
      * Executes `git clean` command with files to clean pattern
      *
      * @param string $pattern
@@ -70,6 +82,18 @@ class GitStack extends CommandStack
      * @return $this
      */
     public function clean($pattern)
+    {
+        return $this->exec([__FUNCTION__, $pattern]);
+    }
+
+    /**
+     * Executes `git reset` command with files to clean pattern
+     *
+     * @param string $pattern
+     *
+     * @return $this
+     */
+    public function reset($pattern)
     {
         return $this->exec([__FUNCTION__, $pattern]);
     }
